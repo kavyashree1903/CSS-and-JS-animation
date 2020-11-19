@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image change on hover</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div id="picture"></div>
+            <ul>
+                <li rel="one"><a href="#" data-text='helias'>helias</a></li>
+                <li rel="two"><a href="#" data-text='snooze'>snooze</a></li>
+                <li rel="three"><a href="#" data-text='betches'>betches</a></li>
+                <li rel="four"><a href="#" data-text='cornerstone'>cornerstone</a></li>
+                <li rel="five"><a href="#" data-text='taylor'>taylor</a></li>
+                <li rel="six"><a href="#" data-text='modernmd'>modernmd</a></li>
+                <li rel="seven"><a href="#" data-text='storyverse'>storyverse</a></li>
+                <li rel="eighth"><a href="#" data-text='gtscareers'>gtscareers</a></li>
+
+            </ul>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript">
+        $('ul li').hover(function() {
+            $('#picture').removeClass().addClass(
+               $(this).attr('rel'));
+            $(this).addClass('active').siblings()
+            .removeClass('active');
+        });
+        </script>
+    </body>
+</html>
