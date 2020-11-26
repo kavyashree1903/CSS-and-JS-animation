@@ -24,8 +24,10 @@
         $('ul li').hover(function() {
             $('#picture').removeClass().addClass(
                $(this).attr('rel'));
-            $(this).addClass('active').siblings()
+            $(this).addClass('all-black active').siblings()
             .removeClass('active');
+            $(this).siblings()
+                .addClass('all-black');
         });
         </script>
     </body>
